@@ -1,0 +1,74 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión Trabajadores CC.OO DAMM (El Puig)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión Trabajadores CC.OO DAMM (El Puig)</h1>
+        <form id="trabajadorForm">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" required>
+            </div>
+            <div class="form-group">
+                <label for="departamento">Departamento:</label>
+                <select id="departamento" required>
+                    <option value="Envasado">Envasado</option>
+                    <option value="Logística">Logística</option>
+                    <option value="Elaboración">Elaboración</option>
+                    <option value="Calidad">Calidad</option>
+                    <option value="Mantenimiento">Mantenimiento</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" required>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fechaInicio">Fecha Inicio Contrato:</label>
+                <input type="date" id="fechaInicio" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaAntiguedad">Fecha Antigüedad:</label>
+                <input type="date" id="fechaAntiguedad" required>
+            </div>
+            <button type="submit">Añadir Trabajador</button>
+        </form>
+
+        <div id="listaTrabjadores">
+            <h2>Lista de Trabajadores</h2>
+            <table id="trabajadoresTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Departamento</th>
+                        <th>Categoría</th>
+                        <th>Fecha Inicio Contrato</th>
+                        <th>Fecha Antigüedad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="trabajadoresBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="form-group save-changes-section">
+            <button id="guardarCambios">Guardar Cambios</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
